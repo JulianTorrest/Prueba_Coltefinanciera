@@ -1,5 +1,5 @@
 # app_v2.py
-# Versión mejorada del script de Streamlit para un pipeline de datos más completo.
+# Versión corregida del script de Streamlit.
 
 import streamlit as st
 import pandas as pd
@@ -115,7 +115,7 @@ st.header("3. 🧠 Transformación y Análisis Predictivo")
 
 model = load_model()
 
-@st.cache_data
+# Se eliminó el decorador @st.cache_data, que causaba el error
 def run_predictions(df, model):
     """
     Simula la ejecución de un modelo de machine learning para predecir el riesgo.
